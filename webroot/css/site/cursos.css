@@ -1,0 +1,64 @@
+.banner{
+    margin-top: 40px;
+}
+.titulocurso{
+    margin-top: 10px;
+}
+
+.colortitulo{
+    color: #BA0F14; 
+}
+
+.colorsubtitulo{
+    color: #8c8c8c;
+}
+
+.colortitulo h5{
+    font-weight: 700;
+}
+.colortitulo h1{
+    font-weight: 700;
+}
+
+.textocorpocurso{
+    text-align: justify;
+}
+.textcentralizado{
+    text-align: center;
+}
+.formulario{
+    margin-top: 0px;
+}
+.formulariocursos{
+    margin-right: 40px;
+    margin-top: 20px;
+    background-color: #DCDCDC;
+    box-shadow: 10px 5px 5px black;
+}
+.formcursos{
+    margin: 0px 25px 25px 25px;
+}
+.rowlinhainscreva{
+    margin-top: 10px;
+}
+.rowsubmit{
+    margin-bottom: 30px;
+    background-color: #BA0F14
+}
+
+.marginrodape{
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 900px){
+    .formulario{
+        margin-top: 10px;
+    }
+    .formulariocursos{
+        margin-right: 10px;
+        background-color: #DCDCDC;
+    }
+    .rowformulariocursos{
+        margin-right: 25px;
+    }
+}

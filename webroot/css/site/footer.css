@@ -1,0 +1,122 @@
+.text-whatsapp{
+    color: green; 
+    background-color: #b3ffd9; 
+    width: 130px;
+    border-radius: 6px;
+    font-size: x-small;
+    margin-top: 10px;
+    margin-left: 70px;
+   
+}
+
+.space-whatsapp{
+   width: 220px; 
+   bottom: 40px;
+}
+.icone-whatsapp{
+    width: 80px;
+}
+
+
+.float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:20px;
+    left:20px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+    margin-top:16px;
+}
+
+.footer-pagina{
+    background-color: #BA0F14;
+    margin-top: 100px;
+}
+.margin-top-bottom-footer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.logo-rodape{
+    width: 30%;
+    margin-left: 40%;
+}
+
+.maps{
+    overflow:hidden;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.paragrafo-endereco{
+    text-align: center;
+    color: #FFF;
+}
+.detalhes-footer{
+    color: #FFF;
+    font-size: 160%;
+    text-align: right;
+    margin-right: 2%;
+    margin-left: -2%;
+}
+
+.space-rigth-footer{
+    margin-right: 5px;
+}
+.instagram-footer{
+    text-align: right;
+    width: 100%;
+}
+
+.lema-footer{
+    font-size: 65%;
+    text-align: right;
+    margin-left: -30%;
+    width: 130%;
+    margin-top: 5%;
+}
+
+.direitos-reservados-footer{
+    font-size: 55%; 
+    text-align: right;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 900px){
+    .maps{
+        overflow:hidden;
+        width: 100%;
+        margin-left: 20%;
+    }
+    .logo-rodape{
+        width: 60%;
+        margin-left: 20%;
+    }
+    .lema-footer{
+        font-size: 65%;
+        text-align: right;
+        margin-left: 0%;
+        width: 100%;
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .logo-rodape{
+        width: 50%;
+    }
+    .maps{
+        overflow:hidden;
+        width: 50%;
+        margin-left: 25%;
+    }
+}

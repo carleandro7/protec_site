@@ -1,0 +1,328 @@
+#carouselExampleIndicators{
+    margin-top: 40px;
+}
+.texto-corpo-rigth{
+    margin-left: 5%;
+    color: #BA0F14;
+    /*font-family: 'Syne';*/
+    font-weight: bold;
+}
+a:hover { 
+    text-decoration-color:#BA0F14; 
+    color: #FFF;
+}
+
+
+.texto-corpo-rigth p{
+    color: #BA0F14;
+    font-size:300%;
+}
+
+.corpo-site{
+    margin: 50px 25px 25px 25px;
+}
+
+.texto-corpo-simples{
+    margin-left: 5%;
+    font-family: 'Syne';
+    background-color: #BA0F14;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.texto-corpo-simples p{
+    color: #FFF;
+    font-size:250%;
+    margin-left: 5%;
+}
+
+.texto-corpo-subtitulo{
+    margin-left: 5%;
+    color: #BA0F14;
+    margin-top: 20px;
+    font-size: 170%;
+    font-weight: 700;
+}
+.quadro-detalhes{
+    width: 150%;
+}
+
+
+.objetoseta{
+    font-size:48px;
+    color:#BA0F14;
+}
+
+.img-notamaxima{
+    margin-left: -100px;
+}
+.img-modelo{
+    margin-left: -100px;
+    height: 105%;
+    width: 105%;
+}
+.linha-barra{
+    height:7px;
+    border-width:0;
+    color: #cbacac;
+    background-color: #cbacac;
+}
+
+.banner-cursos{
+    background-color: #FFF;
+    border-radius: 30px;
+    margin: 50px 25px 25px 25px;
+}
+.espaco-padrao-imagem{
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.espaco-padrao-texto{
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+.fonte-banner-padrao p{
+    color: #818181;
+    font-size: 150%;
+}
+
+.titulo-h1 h2{
+    color: #BA0F14;
+    font-weight: 700;
+    font-size: 300%;
+}
+
+.small-text{
+    color: #BA0F14;
+    font-size: 60%;
+}
+
+.small-text-subtitulo{
+    color: #BA0F14;
+    font-size: 300%;
+    font-weight: 100;
+}
+
+.inscreva{
+    background-color: #BA0F14;
+    color: #FFF;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 110%;
+    font-weight: 700;
+}
+
+.font-paragrafo{
+    color: #BA0F14;
+    font-size: 200%;
+}
+
+.box {
+    float: left;
+    height: 100%;/*Altura da linha*/
+}
+   
+.linha-vertical {
+    border-left: 2px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    box-sizing: border-box;
+    color: #BA0F14;
+}
+.select-center-dropdown{
+    width: 90%;
+    margin-left: 10%; 
+}
+
+.font-selec-dropdown{
+    color: #818181;
+}
+
+.margin-top-bottom{
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.texto-posgraduacao{
+    font-size: 100%;
+}
+
+
+
+
+
+@media only screen and (max-width: 1400px){
+    .titulo-h1 h2{
+        color: #BA0F14;
+        font-weight: 700;
+    }
+    
+    .inscreva{
+        background-color: #BA0F14;
+        color: #FFF;
+        border-radius: 30px;
+        text-align: center;
+        margin-top: 5%;
+        font-size: 110%;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .texto-corpo-simples{
+        width: 800px;
+    }
+    .texto-corpo-simples p{
+        font-size: 32px;
+        color: #FFF;
+        margin-left: 5%;
+    }
+    .quadro-detalhes{
+        width: 150%;
+    }
+    .texto-corpo-subtitulo{
+        margin-left: 5%;
+        color: #BA0F14;
+        margin-top: 20px;
+        font-size: 120%;
+        font-weight: 700;
+    }
+    .titulo-h1 h2{
+        color: #BA0F14;
+        font-weight: 700;
+        font-size: 250%;
+    }
+    .small-text-subtitulo{
+        color: #BA0F14;
+        font-size: 200%;
+        font-weight: 100;
+    }
+
+    .margin-top-bottom{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+  
+
+}
+
+
+@media only screen and (max-width: 900px){
+    .texto-corpo-rigth p{
+        color: #BA0F14;
+        font-size:150%;
+    }
+    
+    .texto-corpo-simples{
+        width: 50%;
+    }
+    .texto-corpo-simples p{
+        font-size: 130%;
+        color: #FFF;
+        margin-left: 5%;
+    }
+    .img-notamaxima{
+        margin-left: 10px;
+    }
+    .img-modelo{
+        margin-left: 10px;
+    }
+    .quadro-detalhes{
+        width: 100%;
+    }
+
+    #carouselExampleIndicators{
+        margin-top: 20px;
+    }
+    .fonte-banner-padrao p{
+        color: #818181;
+        font-size: 100%;
+    }
+    .titulo-h1 h2{
+        color: #BA0F14;
+        font-weight: 700;
+        font-size: 150%;
+    }
+    
+    .inscreva{
+        background-color: #BA0F14;
+        color: #FFF;
+        border-radius: 30px;
+        text-align: center;
+        margin-top: 5%;
+        font-size: 90%;
+        font-weight: 700;
+    }
+
+    .font-paragrafo{
+        color: #BA0F14;
+        font-size: 120%;
+    }
+    
+    .select-center-dropdown{
+        width: 100%;
+        margin-left: 0%;
+        
+    }  
+    
+}
+
+@media only screen and (max-width: 600px){
+    .texto-corpo-rigth p{
+        color: #BA0F14;
+        font-size:150%;
+    }
+    .texto-corpo-subtitulo p{
+        color: #BA0F14;
+        font-size: 70%;
+    }
+    
+    .texto-corpo-simples{
+        width: 60%;
+    }
+    .texto-corpo-simples p{
+        font-size: 130%;
+        color: #FFF;
+        margin-left: 5%;
+    }
+    .texto-corpo-subtitulo{
+        margin-left: 5%;
+        color: #BA0F14;
+        margin-top: 20px;
+        font-size: 90%;
+        font-weight: 700;
+    }
+    .img-notamaximabanner{
+        width: 50%;
+        
+    }
+
+    .espaco-padrao-imagem{
+        margin-top: 40px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .espaco-padrao-texto{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    .titulo-h1 h2{
+        color: #BA0F14;
+        font-weight: 700;
+        font-size: 200%;
+    }
+    
+    .inscreva{
+        background-color: #BA0F14;
+        color: #FFF;
+        border-radius: 30px;
+        text-align: center;
+        margin-top: 5%;
+        font-size: 90%;
+        font-weight: 700;
+    }
+    
+    
+    
+}
