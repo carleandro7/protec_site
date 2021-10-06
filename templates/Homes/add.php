@@ -23,6 +23,10 @@
                     echo $this->Form->control('mensagembtn');
                     echo $this->Form->control('valor');
                     echo $this->Form->control('desconto');
+                    echo $this->Form->control('status');
+                    echo $this->Form->control('ordem');
+                    echo $this->Form->control('cidades_id');
+                    echo $this->Form->control('linkbtn');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

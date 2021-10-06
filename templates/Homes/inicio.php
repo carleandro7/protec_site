@@ -1,4 +1,4 @@
-<div class="homeprincipal" style="background: url('<?=  $this->Url->webroot . 'img/backgroundhome.jpg'?>') no-repeat center top; background-size: 100% 100%;" >
+<div class="homeprincipal" >
     <div class="row row-margin" >
         
         <div class="col-lg-12 titulocorpo titulocorpo_margin">

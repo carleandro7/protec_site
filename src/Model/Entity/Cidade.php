@@ -6,21 +6,13 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Home Entity
+ * Cidade Entity
  *
  * @property int $id
- * @property string $cidade
- * @property string $curso
- * @property string $tipo
- * @property string $mensagembtn
- * @property string $valor
- * @property string|null $desconto
+ * @property string $texto
  * @property string $status
- * @property string $ordem
- * @property int $cidades_id
- * @property string $linkbtn
  */
-class Home extends Entity
+class Cidade extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -32,15 +24,7 @@ class Home extends Entity
      * @var array
      */
     protected $_accessible = [
-        'cidade' => true,
-        'curso' => true,
-        'tipo' => true,
-        'mensagembtn' => true,
-        'valor' => true,
-        'desconto' => true,
+        'texto' => true,
         'status' => true,
-        'ordem' => true,
-        'cidades_id' => true,
-        'linkbtn' => true,
     ];
 }

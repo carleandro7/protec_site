@@ -151,7 +151,8 @@ a:hover {
 
 .homeprincipal{
     width: 100%;
-    min-height:100%;
+    min-height:800px;
+    background: url('../../img/backgroundhome.jpg') no-repeat center top; background-size: 100% 100%;
 }
 .titulocorpo{
    
@@ -204,7 +205,16 @@ a:hover {
 }
 
 
-
+.titulocorpo-curso{
+    font-size: 250%;
+    color: #FFF;
+    text-align: center;
+}
+.subtitulocorpo-curso{
+    font-size: 350%;
+    color: #FFF;
+    text-align: center;
+}
 
 
 

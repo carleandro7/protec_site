@@ -40,6 +40,11 @@ class HomesTable extends Table
         $this->setTable('homes');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->belongsTo('Cidades', [
+            'foreignKey' => 'cidades_id',
+            'joinType' => 'INNER',
+        ]);
     }
 
     /**
@@ -89,6 +94,38 @@ class HomesTable extends Table
             ->maxLength('desconto', 45)
             ->allowEmptyString('desconto');
 
+        $validator
+            ->scalar('status')
+            ->maxLength('status', 45)
+            ->requirePresence('status', 'create')
+            ->notEmptyString('status');
+
+        $validator
+            ->scalar('ordem')
+            ->maxLength('ordem', 45)
+            ->requirePresence('ordem', 'create')
+            ->notEmptyString('ordem');
+
+        $validator
+            ->scalar('linkbtn')
+            ->maxLength('linkbtn', 245)
+            ->requirePresence('linkbtn', 'create')
+            ->notEmptyString('linkbtn');
+
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules): RulesChecker
+    {
+        $rules->add($rules->existsIn(['cidades_id'], 'Cidades'), ['errorField' => 'cidades_id']);
+
+        return $rules;
     }
 }

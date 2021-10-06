@@ -4,12 +4,12 @@ declare(strict_types=1);
 namespace App\Controller;
 
 /**
- * Homes Controller
+ * Cursos Controller
  *
- * @property \App\Model\Table\HomesTable $Homes
- * @method \App\Model\Entity\Home[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
+ * @property \App\Model\Table\CursosTable $Cursos
+ * @method \App\Model\Entity\Curso[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class HomesController extends AppController
+class CursosController extends AppController
 {
     /**
      * Index method
@@ -18,27 +18,25 @@ class HomesController extends AppController
      */
     public function index()
     {
-        $homes = $this->paginate($this->Homes);
+        $cursos = $this->paginate($this->Cursos);
 
-        $this->set(compact('homes'));
+        $this->set(compact('cursos'));
     }
-    public function inicio(){}
-    public function curso(){}
 
     /**
      * View method
      *
-     * @param string|null $id Home id.
+     * @param string|null $id Curso id.
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($id = null)
     {
-        $home = $this->Homes->get($id, [
+        $curso = $this->Cursos->get($id, [
             'contain' => [],
         ]);
 
-        $this->set(compact('home'));
+        $this->set(compact('curso'));
     }
 
     /**
@@ -48,58 +46,58 @@ class HomesController extends AppController
      */
     public function add()
     {
-        $home = $this->Homes->newEmptyEntity();
+        $curso = $this->Cursos->newEmptyEntity();
         if ($this->request->is('post')) {
-            $home = $this->Homes->patchEntity($home, $this->request->getData());
-            if ($this->Homes->save($home)) {
-                $this->Flash->success(__('The home has been saved.'));
+            $curso = $this->Cursos->patchEntity($curso, $this->request->getData());
+            if ($this->Cursos->save($curso)) {
+                $this->Flash->success(__('The curso has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The home could not be saved. Please, try again.'));
+            $this->Flash->error(__('The curso could not be saved. Please, try again.'));
         }
-        $this->set(compact('home'));
+        $this->set(compact('curso'));
     }
 
     /**
      * Edit method
      *
-     * @param string|null $id Home id.
+     * @param string|null $id Curso id.
      * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function edit($id = null)
     {
-        $home = $this->Homes->get($id, [
+        $curso = $this->Cursos->get($id, [
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $home = $this->Homes->patchEntity($home, $this->request->getData());
-            if ($this->Homes->save($home)) {
-                $this->Flash->success(__('The home has been saved.'));
+            $curso = $this->Cursos->patchEntity($curso, $this->request->getData());
+            if ($this->Cursos->save($curso)) {
+                $this->Flash->success(__('The curso has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The home could not be saved. Please, try again.'));
+            $this->Flash->error(__('The curso could not be saved. Please, try again.'));
         }
-        $this->set(compact('home'));
+        $this->set(compact('curso'));
     }
 
     /**
      * Delete method
      *
-     * @param string|null $id Home id.
+     * @param string|null $id Curso id.
      * @return \Cake\Http\Response|null|void Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $home = $this->Homes->get($id);
-        if ($this->Homes->delete($home)) {
-            $this->Flash->success(__('The home has been deleted.'));
+        $curso = $this->Cursos->get($id);
+        if ($this->Cursos->delete($curso)) {
+            $this->Flash->success(__('The curso has been deleted.'));
         } else {
-            $this->Flash->error(__('The home could not be deleted. Please, try again.'));
+            $this->Flash->error(__('The curso could not be deleted. Please, try again.'));
         }
 
         return $this->redirect(['action' => 'index']);
