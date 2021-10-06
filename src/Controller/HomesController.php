@@ -22,6 +22,7 @@ class HomesController extends AppController
 
         $this->set(compact('homes'));
     }
+    public function inicio(){}
 
     /**
      * View method

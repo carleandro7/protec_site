@@ -1,3 +1,4 @@
+
 .space-rigth{
     margin-right: 20px;
 }
@@ -7,7 +8,7 @@
 }
 
 .menu{
-    background-color: #BA0F14;
+    background-color: #FFF;
 }
 
 .menu-color-geral{
@@ -15,7 +16,7 @@
 }
 
 .menu-color{
-    background-color: #BA0F14;
+    background-color: #00298b;
 }
 
 .linhavertical{
@@ -41,11 +42,19 @@
     margin: 20px 0; 
 }
 .navbar-light .navbar-nav .nav-link {
-    color: #fff;
+    color: #000;
 }
 
 .logo{
     margin: 6px 25px;
+    margin-left: 30%;
+}
+
+.whatsapp-text{
+   color:#25d366;
+}
+.whatsapp-text-blue{
+    color: #274c95;
 }
 
 
@@ -55,13 +64,13 @@
 
 
 .search {
-    background-color: #BA0F14;
+    background-color: #FFF;
     border-radius: 6px;
-    border: 2px solid #FFF;
+    border: 2px solid #00298b;
 }
 
 .search-input {
-    color: white;
+    color: #000;
     border: 0;
     outline: 0;
     background: none;
@@ -74,11 +83,11 @@
 
 .search .search-input {
     width: 100%;
-    color:#FFF;
+    color:#000;
 }
 
 .search-input::placeholder{
-    color: #fff;
+    color: #9eaab6;
 }
 
 .search-icon {
@@ -88,8 +97,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFF;
-    background-color: #BA0F14;
+    color: #000;
+    background-color: #FFF;
     font-size: 19px;
     bottom: 33px;
     position: relative;
@@ -108,7 +117,7 @@
 
 .menurapido a {
     background: #FFF;
-    color: #BA0F14;
+    color: #00298b;
     padding: 10px 15px;
     display: inline-block;
     border-radius: 0 0 10px 10px;
@@ -116,10 +125,18 @@
 }
 
 @media only screen and (max-width: 600px) {
-    
+ 
+}
+
+@media only screen and (max-width: 900px) {
+
 }
 
 @media only screen and (max-width: 1200px){
+    .logo{
+        margin: 6px 25px;
+        margin-left: 15%;
+    }
     .linhavertical{
         list-style: none; 
         padding: 0 10px; 
@@ -153,5 +170,10 @@
         display: inline-block;
         line-height: 20px; 
         margin: 20px 0; 
+    }
+
+    .logo{
+        margin: 6px 25px;
+        margin-left: 18%;
     }
 }
