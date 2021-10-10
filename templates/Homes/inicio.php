@@ -50,16 +50,16 @@
         </div>
     </div>
     <div class="row row-margin " >
-        <div class="col-lg-4 col-md-6 col-sm-12 ">
+        <div class="col-lg-4 col-md-6 col-sm-12 box">
             <div class="curso-cards">
                 <p class="card-cidade"> Teresina - Piauí </p>
                 <h3>Licenciatura em Pedagogia</h3>
                 <p class="card-tipocurso">EAD com encontros presenciais</p>
                 <div class="row" >
-                    <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="col-lg-7 col-md-7 col-sm-12">
                         <a href=""><div class="inscreva"> SOLICITAR BOLSA </div></a>
                     </div>
-                    <div class="col-lg-7 col-md-6 col-sm-12 card-valores">
+                    <div class="col-lg-5 col-md-5 col-sm-12 card-valores">
                             <b class="card-valor1">R$ 150,00</b><br>
                             <b class="card-valor2">R$ 99,00 </b>
                     </div>
@@ -67,16 +67,16 @@
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12 ">
+        <div class="col-lg-4 col-md-6 col-sm-12 box">
             <div class="curso-cards">
                 <p class="card-cidade"> Teresina - Piauí </p>
                 <h3>Licenciatura em Pedagogia</h3>
                 <p class="card-tipocurso">EAD com encontros presenciais</p>
                 <div class="row" >
-                    <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="col-lg-7 col-md-7 col-sm-12">
                         <a href=""><div class="inscreva"> SOLICITAR BOLSA </div></a>
                     </div>
-                    <div class="col-lg-7 col-md-6 col-sm-12 card-valores">
+                    <div class="col-lg-5 col-md-5 col-sm-12 card-valores">
                             <b class="card-valor1">R$ 150,00</b><br>
                             <b class="card-valor2">R$ 99,00 </b>
                     </div>
@@ -84,16 +84,16 @@
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12 ">
+        <div class="col-lg-4 col-md-6 col-sm-12 box">
             <div class="curso-cards">
                 <p class="card-cidade"> Teresina - Piauí </p>
                 <h3>Licenciatura em Pedagogia</h3>
                 <p class="card-tipocurso">EAD com encontros presenciais</p>
                 <div class="row" >
-                    <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="col-lg-7 col-md-7 col-sm-12">
                         <a href=""><div class="inscreva"> SOLICITAR BOLSA </div></a>
                     </div>
-                    <div class="col-lg-7 col-md-6 col-sm-12 card-valores">
+                    <div class="col-lg-5 col-md-5 col-sm-12 card-valores">
                             <b class="card-valor1">R$ 150,00</b><br>
                             <b class="card-valor2">R$ 99,00 </b>
                     </div>
