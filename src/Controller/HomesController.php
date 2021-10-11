@@ -18,6 +18,7 @@ class HomesController extends AppController
      */
     public function index()
     {
+        $this->layoutAdm();
         $homes = $this->paginate($this->Homes);
 
         $this->set(compact('homes'));
@@ -34,6 +35,7 @@ class HomesController extends AppController
      */
     public function view($id = null)
     {
+        $this->layoutAdm();
         $home = $this->Homes->get($id, [
             'contain' => [],
         ]);
@@ -48,6 +50,7 @@ class HomesController extends AppController
      */
     public function add()
     {
+        $this->layoutAdm();
         $home = $this->Homes->newEmptyEntity();
         if ($this->request->is('post')) {
             $home = $this->Homes->patchEntity($home, $this->request->getData());
@@ -70,6 +73,7 @@ class HomesController extends AppController
      */
     public function edit($id = null)
     {
+        $this->layoutAdm();
         $home = $this->Homes->get($id, [
             'contain' => [],
         ]);

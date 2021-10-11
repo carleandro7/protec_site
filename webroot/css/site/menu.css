@@ -19,6 +19,16 @@
     background-color: #00298b;
 }
 
+.menuadm{
+    background-color: #BA0F14;
+}
+
+
+.menu-coloradm{
+    background-color: #BA0F14;
+}
+
+
 .linhavertical{
     list-style: none; 
     padding: 0 10px; 
@@ -42,7 +52,7 @@
     margin: 20px 0; 
 }
 .navbar-light .navbar-nav .nav-link {
-    color: #000;
+    color: #FFF;
 }
 
 .logo{
