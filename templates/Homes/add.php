@@ -11,7 +11,7 @@
         <fieldset>
             <div class="row">
                 <div class="col-lg-5 form-group">  
-                    <?php echo $this->Form->control('cidade_id', array('options' => $cidades,"class" => "form-control")); ?>
+                    <?php echo $this->Form->control('cidades_id', array('options' => $cidades,"class" => "form-control")); ?>
                 </div>
                 <div class="col-lg-5 form-group">  
                     <label for="nome" class="control-label">Curso</label> 

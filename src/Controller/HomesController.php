@@ -87,7 +87,8 @@ class HomesController extends AppController
             }
             $this->Flash->error(__($this->getMenssagem("error")));
         }
-        $this->set(compact('home'));
+        $cidades = $this->Homes->Cidades->find('list', ['keyField' => 'id', 'valueField' => 'texto','limit' => 200]);
+        $this->set(compact('home', 'cidades'));
     }
 
     /**

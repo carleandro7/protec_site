@@ -60,12 +60,6 @@ class HomesTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
-            ->scalar('cidade')
-            ->maxLength('cidade', 205)
-            ->requirePresence('cidade', 'create')
-            ->notEmptyString('cidade');
-
-        $validator
             ->scalar('curso')
             ->maxLength('curso', 205)
             ->requirePresence('curso', 'create')

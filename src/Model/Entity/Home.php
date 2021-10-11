@@ -32,7 +32,6 @@ class Home extends Entity
      * @var array
      */
     protected $_accessible = [
-        'cidade' => true,
         'curso' => true,
         'tipo' => true,
         'mensagembtn' => true,
