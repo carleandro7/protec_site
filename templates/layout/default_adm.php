@@ -69,17 +69,68 @@
     
     <?php echo $this->Html->script('bootstrap.min');?>
 
-     <script>
-        ClassicEditor
+    <script>
+            ClassicEditor
             .create( document.querySelector( '#editor' ) )
             .then(editor => { 
-              if(typeof texto != "undefined" )
-                editor.setData( texto ); 
+              if(typeof textoPergunta != "undefined" )
+                editor.setData( textoPergunta ); 
+            })
+            .catch( error => {
+                console.error( error );
+            } );
+
+            ClassicEditor
+            .create( document.querySelector( '#editora' ) )
+            .then(editor => { 
+              if(typeof textoA != "undefined" )
+                editor.setData( textoA ); 
+            })
+            .catch( error => {
+                console.error( error );
+            } );  
+
+            ClassicEditor
+            .create( document.querySelector( '#editorb' ) )
+            .then(editor => { 
+              if(typeof textoB != "undefined" )
+                editor.setData( textoB ); 
+            })
+            .catch( error => {
+                console.error( error );
+            } );
+
+            ClassicEditor
+            .create( document.querySelector( '#editorc' ) )
+            .then(editor => { 
+              if(typeof textoC != "undefined" )
+                editor.setData( textoC ); 
+            })
+            .catch( error => {
+                console.error( error );
+            } );
+
+            ClassicEditor
+            .create( document.querySelector( '#editord' ) )
+            .then(editor => { 
+              if(typeof textoD != "undefined" )
+                editor.setData( textoD ); 
+            })
+            .catch( error => {
+                console.error( error );
+            } );  
+
+            ClassicEditor
+            .create( document.querySelector( '#editore' ) )
+            .then(editor => { 
+              if(typeof textoE != "undefined" )
+                editor.setData( textoE ); 
             })
             .catch( error => {
                 console.error( error );
             } );
              
     </script>
+
 </body>
 </html>

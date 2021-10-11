@@ -52,6 +52,25 @@ class CursosController extends AppController
         $curso = $this->Cursos->newEmptyEntity();
         if ($this->request->is('post')) {
             $curso = $this->Cursos->patchEntity($curso, $this->request->getData());
+            if(!$curso->getErros){
+                $arquivo = $this->request->getData("arquivo1");
+                if ($arquivo->getClientFilename() != ""){
+                    $name = "icone".$this->getIdUserLogado().time().$this->getExtensaoArquivo($arquivo);
+                    $targetPath = WWW_ROOT."imagens".DS.$name;
+                    if($name)
+                        $arquivo->moveTo($targetPath);
+                    $curso->icone = $name;
+                }
+                $imagem = $this->request->getData("arquivo2");
+                if ($imagem->getClientFilename() != ""){
+                    $name = $this->getIdUserLogado().time().$this->getExtensaoArquivo($imagem);
+                    $targetPath = WWW_ROOT."imagens".DS.$name;
+                    if($name)
+                        $imagem->moveTo($targetPath);
+                    $curso->imagem = $name;
+                }
+                
+            }
             if ($this->Cursos->save($curso)) {
                 $this->Flash->success(__('The curso has been saved.'));
 
@@ -77,6 +96,25 @@ class CursosController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $curso = $this->Cursos->patchEntity($curso, $this->request->getData());
+            if(!$curso->getErros){
+                $arquivo = $this->request->getData("arquivo1");
+                if ($arquivo->getClientFilename() != ""){
+                    $name = "icone".$this->getIdUserLogado().time().$this->getExtensaoArquivo($arquivo);
+                    $targetPath = WWW_ROOT."imagens".DS.$name;
+                    if($name)
+                        $arquivo->moveTo($targetPath);
+                    $curso->icone = $name;
+                }
+                $imagem = $this->request->getData("arquivo2");
+                if ($imagem->getClientFilename() != ""){
+                    $name = $this->getIdUserLogado().time().$this->getExtensaoArquivo($imagem);
+                    $targetPath = WWW_ROOT."imagens".DS.$name;
+                    if($name)
+                        $imagem->moveTo($targetPath);
+                    $curso->imagem = $name;
+                }
+                
+            }
             if ($this->Cursos->save($curso)) {
                 $this->Flash->success(__('The curso has been saved.'));
 

@@ -1,45 +1,115 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Curso $curso
- */
-?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $curso->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $curso->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Cursos'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+<div class="row top-adm">
+        <div class="col-lg-12">
+            <h2 class="page-header">
+                Alterar Curso
+            </h2>
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="cursos form content">
-            <?= $this->Form->create($curso) ?>
-            <fieldset>
-                <legend><?= __('Edit Curso') ?></legend>
-                <?php
-                    echo $this->Form->control('tituloprincipal');
-                    echo $this->Form->control('subtituloprincipal');
-                    echo $this->Form->control('curso');
-                    echo $this->Form->control('turno');
-                    echo $this->Form->control('valorintegral');
-                    echo $this->Form->control('valordesconto');
-                    echo $this->Form->control('duracao');
-                    echo $this->Form->control('icone');
-                    echo $this->Form->control('titulo');
-                    echo $this->Form->control('subtitulo');
-                    echo $this->Form->control('texto');
-                    echo $this->Form->control('imagem');
-                    echo $this->Form->control('tituloinstituicao');
-                    echo $this->Form->control('textoinstituicao');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
-        </div>
-    </div>
 </div>
+<div class="clientes form">
+    <?php echo $this->Form->create($curso, array("role" => "form", 'type' => 'file')); ?>
+        <fieldset>
+            <div class="row">
+                <div class="col-lg-6 form-group">  
+                    <label for="nome" class="control-label">Título principal</label> 
+                    <?php echo $this->Form->input('tituloprincipal', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-6 form-group">  
+                    <label for="nome" class="control-label">Subtítulo principal</label> 
+                    <?php echo $this->Form->input('subtituloprincipal', array("class" => "form-control")); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">  
+                    <label for="nome" class="control-label">Curso</label> 
+                    <?php echo $this->Form->input('curso', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-3 form-group">  
+                    <label for="nome" class="control-label">Turno</label> 
+                    <?php echo $this->Form->input('turno', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-3 form-group">  
+                    <label for="nome" class="control-label">Valor integral</label> 
+                    <?php echo $this->Form->input('valorintegral', array("class" => "form-control")); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 form-group">  
+                    <label for="nome" class="control-label">Valor com desconto</label> 
+                    <?php echo $this->Form->input('valordesconto', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-3 form-group">  
+                    <label for="nome" class="control-label">Duração</label> 
+                    <?php echo $this->Form->input('duracao', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-6 form-group">  
+                    <label for="nome" class="control-label">Título do Texto</label> 
+                    <?php echo $this->Form->input('titulo', array("class" => "form-control")); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">  
+                    <label for="nome" class="control-label">Subtítulo do Texto</label> 
+                    <?php echo $this->Form->input('subtitulo', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-3 form-group">  
+                    <label for="nome" class="control-label">Título da Instituição</label> 
+                    <?php echo $this->Form->input('tituloinstituicao', array("class" => "form-control")); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 form-group">   
+                    <label for="arquivo" class="control-label">Icone da Instituição</label> 
+                    <?php echo $this->Form->control('arquivo1',array("label"=> "", "id"=>"arquivo", 'type'=> 'file')); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <?php echo $this->Html->image("../imagens/".$curso->icone, array("class" => "img-fluid")); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 form-group">   
+                    <label for="arquivo" class="control-label">Imagem do texto</label> 
+                    <?php echo $this->Form->control('arquivo2',array("label"=> "", "id"=>"arquivo2", 'type'=> 'file')); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">
+                    <?php echo $this->Html->image("../imagens/".$curso->imagem, array("class" => "img-fluid")); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 form-group">  
+                    <label for="editora" class="control-label">Texto Principal</label> 
+                    <textarea name="texto" id="editora" class="input text reqired" >
+                        <p><font color="#800080"></font><br/>
+                    </textarea>
+                </div>
+            </div>  
+            <div class="row">
+                <div class="col-lg-12 form-group">  
+                    <label for="editord" class="control-label">Texto da Instituição</label> 
+                    <textarea name="textoinstituicao" id="editord" class="input text reqired" >
+                        <p><font color="#800080"></font><br/>
+                    </textarea>
+                </div>
+            </div>  
+     
+        </fieldset>
+        <button type="submit" class="btn btn-primary marginrodape">Salvar</button>
+    <?php echo $this->Form->end(); ?>                            
+</div>
+
+<?php 
+
+$dadoTexto = $curso->texto;
+$dadoTextoinstituicao = $curso->textoinstituicao;
+
+
+?> 
+
+<script>
+    let textoA = "<?php echo empty($dadoTexto) ? "Texto aqui" : $dadoTexto; ?>";
+    let textoD = "<?php echo empty($dadoTextoinstituicao) ? "Texto aqui" : $dadoTextoinstituicao; ?>";
+
+</script>

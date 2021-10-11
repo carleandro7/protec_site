@@ -77,6 +77,9 @@ class AppController extends Controller
         $session = $this->request->getAttribute('session');
         return $session->read('Auth.User.email');
     }
+    protected function getExtensaoArquivo($nome){
+        return  ".".substr($nome->getClientFilename(), -3);
+     }
 
     protected function getMenssagem($msg){
         $mensagens = [
