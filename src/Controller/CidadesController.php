@@ -53,11 +53,11 @@ class CidadesController extends AppController
         if ($this->request->is('post')) {
             $cidade = $this->Cidades->patchEntity($cidade, $this->request->getData());
             if ($this->Cidades->save($cidade)) {
-                $this->Flash->success(__('The cidade has been saved.'));
+                $this->Flash->success(__($this->getMenssagem("success")));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The cidade could not be saved. Please, try again.'));
+            $this->Flash->error(__($this->getMenssagem("error")));
         }
         $this->set(compact('cidade'));
     }
@@ -78,11 +78,11 @@ class CidadesController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $cidade = $this->Cidades->patchEntity($cidade, $this->request->getData());
             if ($this->Cidades->save($cidade)) {
-                $this->Flash->success(__('The cidade has been saved.'));
+                $this->Flash->success(__($this->getMenssagem("success")));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The cidade could not be saved. Please, try again.'));
+            $this->Flash->error(__($this->getMenssagem("error")));
         }
         $this->set(compact('cidade'));
     }
@@ -99,9 +99,9 @@ class CidadesController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $cidade = $this->Cidades->get($id);
         if ($this->Cidades->delete($cidade)) {
-            $this->Flash->success(__('The cidade has been deleted.'));
+            $this->Flash->success(__($this->getMenssagem("successDelete")));
         } else {
-            $this->Flash->error(__('The cidade could not be deleted. Please, try again.'));
+            $this->Flash->error(__($this->getMenssagem("errorDelete")));
         }
 
         return $this->redirect(['action' => 'index']);

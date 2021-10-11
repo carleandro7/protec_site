@@ -72,11 +72,11 @@ class CursosController extends AppController
                 
             }
             if ($this->Cursos->save($curso)) {
-                $this->Flash->success(__('The curso has been saved.'));
+                $this->Flash->success(__($this->getMenssagem("success")));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The curso could not be saved. Please, try again.'));
+            $this->Flash->error(__($this->getMenssagem("error")));
         }
         $this->set(compact('curso'));
     }
@@ -116,11 +116,11 @@ class CursosController extends AppController
                 
             }
             if ($this->Cursos->save($curso)) {
-                $this->Flash->success(__('The curso has been saved.'));
+                $this->Flash->success(__($this->getMenssagem("success")));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The curso could not be saved. Please, try again.'));
+            $this->Flash->error(__($this->getMenssagem("error")));
         }
         $this->set(compact('curso'));
     }
@@ -137,9 +137,9 @@ class CursosController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $curso = $this->Cursos->get($id);
         if ($this->Cursos->delete($curso)) {
-            $this->Flash->success(__('The curso has been deleted.'));
+            $this->Flash->success(__($this->getMenssagem("successDelete")));
         } else {
-            $this->Flash->error(__('The curso could not be deleted. Please, try again.'));
+            $this->Flash->error(__($this->getMenssagem("errorDelete")));
         }
 
         return $this->redirect(['action' => 'index']);
