@@ -10,61 +10,67 @@
         <fieldset>
             <div class="row">
                 <div class="col-lg-6 form-group">  
-                    <label for="nome" class="control-label">Título principal</label> 
+                    <label for="tituloprincipal" class="control-label">Título principal</label> 
                     <?php echo $this->Form->input('tituloprincipal', array("class" => "form-control")); ?>
                 </div>
                 <div class="col-lg-6 form-group">  
-                    <label for="nome" class="control-label">Subtítulo principal</label> 
+                    <label for="subtituloprincipal" class="control-label">Subtítulo principal</label> 
                     <?php echo $this->Form->input('subtituloprincipal', array("class" => "form-control")); ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">  
-                    <label for="nome" class="control-label">Curso</label> 
+                    <label for="curso" class="control-label">Curso</label> 
                     <?php echo $this->Form->input('curso', array("class" => "form-control")); ?>
                 </div>
                 <div class="col-lg-3 form-group">  
-                    <label for="nome" class="control-label">Turno</label> 
+                    <label for="turno" class="control-label">Turno</label> 
                     <?php echo $this->Form->input('turno', array("class" => "form-control")); ?>
                 </div>
                 <div class="col-lg-3 form-group">  
-                    <label for="nome" class="control-label">Valor integral</label> 
-                    <?php echo $this->Form->input('valorintegral', array("class" => "form-control")); ?>
+                    <label for="turno" class="control-label">Modalidade</label> 
+                    <?php echo $this->Form->input('modalidade', array("class" => "form-control")); ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-3 form-group">  
-                    <label for="nome" class="control-label">Valor com desconto</label> 
+                    <label for="valorintegral" class="control-label">Valor integral</label> 
+                    <?php echo $this->Form->input('valorintegral', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-3 form-group">  
+                    <label for="valordesconto" class="control-label">Valor com desconto</label> 
                     <?php echo $this->Form->input('valordesconto', array("class" => "form-control")); ?>
                 </div>
                 <div class="col-lg-3 form-group">  
-                    <label for="nome" class="control-label">Duração</label> 
+                    <label for="duracao" class="control-label">Duração</label> 
                     <?php echo $this->Form->input('duracao', array("class" => "form-control")); ?>
-                </div>
-                <div class="col-lg-6 form-group">  
-                    <label for="nome" class="control-label">Título do Texto</label> 
-                    <?php echo $this->Form->input('titulo', array("class" => "form-control")); ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 form-group">  
-                    <label for="nome" class="control-label">Subtítulo do Texto</label> 
+                    <label for="titulo" class="control-label">Título do Texto</label> 
+                    <?php echo $this->Form->input('titulo', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-6 form-group">  
+                    <label for="subtitulo" class="control-label">Subtítulo do Texto</label> 
                     <?php echo $this->Form->input('subtitulo', array("class" => "form-control")); ?>
                 </div>
-                <div class="col-lg-3 form-group">  
-                    <label for="nome" class="control-label">Título da Instituição</label> 
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">  
+                    <label for="tituloinstituicao" class="control-label">Título da Instituição</label> 
                     <?php echo $this->Form->input('tituloinstituicao', array("class" => "form-control")); ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 form-group">   
-                    <label for="arquivo" class="control-label">Icone da Instituição</label> 
+                    <label for="arquivo1" class="control-label">Icone da Instituição</label> 
                     <?php echo $this->Form->control('arquivo1',array("label"=> "", "id"=>"arquivo", 'type'=> 'file')); ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 form-group">   
-                    <label for="arquivo" class="control-label">Imagem do texto</label> 
+                    <label for="arquivo2" class="control-label">Imagem do texto</label> 
                     <?php echo $this->Form->control('arquivo2',array("label"=> "", "id"=>"arquivo2", 'type'=> 'file')); ?>
                 </div>
             </div>

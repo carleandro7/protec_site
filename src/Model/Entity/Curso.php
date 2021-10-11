@@ -50,5 +50,6 @@ class Curso extends Entity
         'imagem' => true,
         'tituloinstituicao' => true,
         'textoinstituicao' => true,
+        'modalidade' => true,
     ];
 }

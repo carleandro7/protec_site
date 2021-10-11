@@ -93,7 +93,7 @@
                     <b><?= $curso->subtitulo ?></b>
                 </div>
                 <div class="col-lg-12 texto-curso">
-                    <p> &nbsp;&nbsp;&nbsp;<?= $curso->texto ?></p>
+                    <p><?= $curso->texto ?></p>
                 </div>
             </div>
         </div>
@@ -105,10 +105,10 @@
     </div>
     <div class="row row-margin" >
         <div class="col-lg-12 titulotexto-curso">
-            <b> <?= $curso->tituloinstituicao ?> </b>
+             <?= $curso->tituloinstituicao ?> 
         </div>
         <div class="col-lg-12 texto-curso">
-            <p><?= $curso->textoinstituicao ?></p>
+            <?= $curso->textoinstituicao ?>
         </div>
     </div>
 </div>

@@ -101,6 +101,12 @@ class CursosTable extends Table
             ->maxLength('icone', 245)
             ->requirePresence('icone', 'create')
             ->notEmptyString('icone');
+        
+        $validator
+            ->scalar('modalidade')
+            ->maxLength('modalidade', 205)
+            ->requirePresence('modalidade', 'create')
+            ->notEmptyString('modalidade');
 
         $validator
             ->scalar('titulo')
