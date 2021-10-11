@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 namespace App\Controller;
+use Cake\Event\EventInterface;
 
 /**
  * Homes Controller
@@ -11,6 +12,10 @@ namespace App\Controller;
  */
 class HomesController extends AppController
 {
+    public function beforeFilter(EventInterface $event)
+    {
+        $this->Auth->allow(['inicio', 'curso']);
+    }
     /**
      * Index method
      *
@@ -34,7 +39,13 @@ class HomesController extends AppController
         }
         $this->set(compact('selectCidades','homes','cidades','select_cidade'));
     }
-    public function curso(){}
+    public function curso($id = null){
+        $this->loadModel('Cursos');
+        $curso = $this->Cursos->get($id, [
+            'contain' => [],
+        ]);
+        $this->set(compact('curso'));
+    }
 
     /**
      * View method

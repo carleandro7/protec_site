@@ -1,16 +1,16 @@
 <div class="homecurso"  >
     <div class="row row-margin" >    
         <div class="col-lg-12 titulocorpo-curso titulocorpo_margin">
-            <b>BOLSA DE ESTUDO DISPONÍVEL</b>
+            <b><?= $curso->tituloprincipal ?></b>
         </div>
         <div class="col-lg-10 barraamarela">
             <?php echo $this->Html->image("barraamarela.png", array("class" => "img-fluid")); ?></a>
         </div>
         <div class="col-lg-12 titulocorpo-curso ">
-            <b>PARA O CURSO TÉCNICO EM</b>
+            <b><?= $curso->subtituloprincipal ?></b>
         </div>
         <div class="col-lg-12 subtitulocorpo-curso ">
-            <b>ENFERMAGEM</b>
+            <b><?= $curso->curso ?></b>
         </div>
     </div>
     <div class="row row-margin" > 
@@ -21,7 +21,7 @@
                     <b>INSTITUIÇÃO</b>
                 </div>
                 <div class="col-lg-12 curso-button">
-                <?php echo $this->Html->image("maltalogo.jpg", array("class" => "img-fluid")); ?>
+                <?php echo $this->Html->image("../imagens/".$curso->icone, array("class" => "img-fluid")); ?>
                 </div>
             </div>        
         </div>
@@ -31,13 +31,13 @@
                     <b>MODALIDADE</b>
                 </div>
                 <div class="col-lg-12 curso-button">
-                    Presencial
+                    <?= $curso->turno ?>
                 </div>
                 <div class="col-lg-16 curso-button">
                     <b>DURAÇÃO DO CURSO</b>
                 </div>
                 <div class="col-lg-12 curso-button">
-                    2 ANOS
+                    <?= $curso->duracao ?>
                 </div>
             </div>        
         </div>
@@ -47,7 +47,7 @@
                     <b>TURNO</b>
                 </div>
                 <div class="col-lg-12 curso-button">
-                    Tarde
+                    <?= $curso->turno ?>
                 </div>
             </div>        
         </div>
@@ -57,7 +57,7 @@
                     <b>VALOR INTEGRAL</b>
                 </div>
                 <div class="col-lg-12 curso-button">
-                    R$ 300,00
+                    <?= $curso->valorintegral ?>
                 </div>
             </div>        
         </div>
@@ -67,7 +67,7 @@
                     <b>VALOR COM DESCONTO</b>
                 </div>
                 <div class="col-lg-12 curso-button3">
-                <b>R$ 200,00</b>
+                <b><?= $curso->valordesconto ?></b>
                 </div>
             </div>        
         </div>
@@ -82,18 +82,18 @@
     </div>
     <div class="row row-margin" >
         <div class="col-lg-4 col-md-4 col-sm-12">
-            <?php echo $this->Html->image("enfermagemtec.png", array("class" => "img-fluid")); ?></a>
+            <?php echo $this->Html->image("../imagens/".$curso->imagem, array("class" => "img-fluid")); ?></a>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12">
             <div class="row" >
                 <div class="col-lg-12 titulotexto-curso">
-                   <b> CURSO TÉCNICO EM  </b>
+                   <b> <?= $curso->titulo ?>  </b>
                 </div>
                 <div class="col-lg-12 subtitulotexto-curso">
-                    <b>ENFERMAGEM</b>
+                    <b><?= $curso->subtitulo ?></b>
                 </div>
                 <div class="col-lg-12 texto-curso">
-                    <p> &nbsp;&nbsp;&nbsp;O Curso Técnico em Enfermagem proporcionará ao estudante uma perspectiva de totalidade, onde os conteúdos das disciplinas serão contextualizados, conforme visão sistêmica do processo produtivo. Isto significa recuperar a importância de trabalhar com os estudantes os fundamentados científicos-tecnológicos presentes nas disciplinas presentes nas disciplinas da matriz curricular do curso, evitando a compartimentalização na construção do conhecimento.</p>
+                    <p> &nbsp;&nbsp;&nbsp;<?= $curso->texto ?></p>
                 </div>
             </div>
         </div>
@@ -105,10 +105,10 @@
     </div>
     <div class="row row-margin" >
         <div class="col-lg-12 titulotexto-curso">
-            <b> Sobre a  Instituição </b>
+            <b> <?= $curso->tituloinstituicao ?> </b>
         </div>
         <div class="col-lg-12 texto-curso">
-            <p>O Curso Técnico em Enfermagem proporcionará ao estudante uma perspectiva de totalidade, onde os conteúdos das disciplinas serão contextualizados, conforme visão sistêmica do processo produtivo. Isto significa recuperar a importância de trabalhar com os estudantes os fundamentados científicos-tecnológicos presentes nas disciplinas presentes nas disciplinas da matriz curricular do curso, evitando a compartimentalização na construção do conhecimento.</p>
+            <p><?= $curso->textoinstituicao ?></p>
         </div>
     </div>
 </div>
