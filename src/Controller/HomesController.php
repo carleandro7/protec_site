@@ -23,7 +23,17 @@ class HomesController extends AppController
 
         $this->set(compact('homes'));
     }
-    public function inicio(){}
+    public function inicio(){
+        $cidades = $this->Homes->Cidades->find('all',array('conditions' => array('status' => 'Ativo')))->order(['texto' => 'ASC']);;
+        $homes = $this->Homes->find('all',array('contain' => ['Cidades'], 'conditions' => array('homes.status' => 'Ativo')))->order(['ordem' => 'ASC']);
+        $selectCidades = $this->Homes->newEmptyEntity();
+        $select_cidade= 0;
+        if ($this->request->is('post')) {
+            $select_cidade = $this->request->getData()['cidade'];
+
+        }
+        $this->set(compact('selectCidades','homes','cidades','select_cidade'));
+    }
     public function curso(){}
 
     /**

@@ -34,72 +34,58 @@
     <div class="row row-margin" >
         <div class="col-lg-6 col-md-6 col-sm-12 curso-titulo2">
             <b>Bolsas interessantes para você</b><br>
+            <?php echo $this->Form->create($selectCidades, array("role" => "form")); ?>
+                <fieldset>
             <div class="row" >
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     Mostrando: 
                 </div>
                 <div class="col-lg-4 col-md-8 col-sm-12">
-                    <select class="form-control" aria-label="Default select">
-                    <option selected>Teresina, PI</option>
-                    <option value="1">Teresina, PI</option>
-                    <option value="2">Teresina, PI</option>
-                    <option value="3">Teresina, PI</option>
+                    <select name="cidade" onchange="this.form.submit()" id="select-cidade" class="form-control" aria-label="Default select">
+                    <?php foreach ($cidades as $cidade): ?>
+                        <option <?= ($cidade->id == $select_cidade ? 'selected' : '') ?> value="<?= $cidade->id ?>"><?= $cidade->texto ?></option>
+                    <?php endforeach; ?> 
                     </select>
                 </div>
             </div>
         </div>
+        </fieldset>
+        <?php echo $this->Form->end(); ?>  
     </div>
-    <div class="row row-margin " >
+    <div class="row row-margin " id="cursos-cards">
+    <?php 
+    if($select_cidade == 0){
+        $select_cidade = $cidades->first()->id;
+    }
+    foreach ($homes as $home): 
+        if($home->cidades_id == $select_cidade){?>
         <div class="col-lg-4 col-md-6 col-sm-12 box">
             <div class="curso-cards">
-                <p class="card-cidade"> Teresina - Piauí </p>
-                <h3>Licenciatura em Pedagogia</h3>
-                <p class="card-tipocurso">EAD com encontros presenciais</p>
+                <p class="card-cidade"> <?= $home->cidade->texto ?> </p>
+                <h3><?= $home->curso ?></h3>
+                <p class="card-tipocurso"><?= $home->tipo ?></p>
                 <div class="row" >
                     <div class="col-lg-7 col-md-7 col-sm-12">
-                        <a href=""><div class="inscreva"> SOLICITAR BOLSA </div></a>
+                        <a href="<?= $home->linkbtn ?>"><div class="inscreva"> <?= $home->mensagembtn ?> </div></a>
                     </div>
                     <div class="col-lg-5 col-md-5 col-sm-12 card-valores">
-                            <b class="card-valor1">R$ 150,00</b><br>
-                            <b class="card-valor2">R$ 99,00 </b>
+                            <b class="card-valor1"><?= $home->valor ?></b><br>
+                            <b class="card-valor2"><?= $home->desconto ?> </b>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-12 box">
-            <div class="curso-cards">
-                <p class="card-cidade"> Teresina - Piauí </p>
-                <h3>Licenciatura em Pedagogia</h3>
-                <p class="card-tipocurso">EAD com encontros presenciais</p>
-                <div class="row" >
-                    <div class="col-lg-7 col-md-7 col-sm-12">
-                        <a href=""><div class="inscreva"> SOLICITAR BOLSA </div></a>
-                    </div>
-                    <div class="col-lg-5 col-md-5 col-sm-12 card-valores">
-                            <b class="card-valor1">R$ 150,00</b><br>
-                            <b class="card-valor2">R$ 99,00 </b>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-12 box">
-            <div class="curso-cards">
-                <p class="card-cidade"> Teresina - Piauí </p>
-                <h3>Licenciatura em Pedagogia</h3>
-                <p class="card-tipocurso">EAD com encontros presenciais</p>
-                <div class="row" >
-                    <div class="col-lg-7 col-md-7 col-sm-12">
-                        <a href=""><div class="inscreva"> SOLICITAR BOLSA </div></a>
-                    </div>
-                    <div class="col-lg-5 col-md-5 col-sm-12 card-valores">
-                            <b class="card-valor1">R$ 150,00</b><br>
-                            <b class="card-valor2">R$ 99,00 </b>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <?php } endforeach; ?>  
+        
 
     </div>
 </div>
+
+<script>
+    function reloadDIV () {
+        var select_cidade = document.getElementById("select-cidade").value;
+        alert(select_cidade);
+        $('#cursos-cards').load(self);
+    } 
+
+    </script>
