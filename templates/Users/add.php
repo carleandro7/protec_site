@@ -1,29 +1,30 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\User $user
- */
-?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+
+<div class="row top-adm">
+        <div class="col-lg-12">
+            <h2 class="page-header">
+                Novo Usuário
+            </h2>
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="users form content">
-            <?= $this->Form->create($user) ?>
-            <fieldset>
-                <legend><?= __('Add User') ?></legend>
-                <?php
-                    echo $this->Form->control('nome');
-                    echo $this->Form->control('email');
-                    echo $this->Form->control('password');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
-        </div>
-    </div>
+</div>
+<div class="clientes form">
+    <?php echo $this->Form->create($user, array("role" => "form")); ?>
+        <fieldset>
+            <div class="row">
+                <div class="col-lg-6 form-group">  
+                    <?php echo $this->Form->control('nome', array("label"=>"Nome","class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-6 form-group">  
+                    <?php echo $this->Form->control('email', array("label"=>"Email","class" => "form-control", "type"=>"email")); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 form-group">  
+                    <?php echo $this->Form->control('password', array("label"=>"Senha","class" => "form-control", "type"=>"password")); ?>
+                </div>
+            </div>
+            
+       
+        </fieldset>
+        <button type="submit" class="btn btn-primary marginrodape">Salvar Usuário</button>
+    <?php echo $this->Form->end(); ?>                            
 </div>

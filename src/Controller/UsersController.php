@@ -43,26 +43,12 @@ class UsersController extends AppController
      */
     public function index()
     {
+        $this->layoutAdm();
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id User id.
-     * @return \Cake\Http\Response|null|void Renders view
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $user = $this->Users->get($id, [
-            'contain' => [],
-        ]);
-
-        $this->set(compact('user'));
-    }
 
     /**
      * Add method
@@ -71,6 +57,7 @@ class UsersController extends AppController
      */
     public function add()
     {
+        $this->layoutAdm();
         $user = $this->Users->newEmptyEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
@@ -93,6 +80,7 @@ class UsersController extends AppController
      */
     public function edit($id = null)
     {
+        $this->layoutAdm();
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
