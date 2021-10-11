@@ -35,6 +35,9 @@
             <a class="nav-link menuadm" href="<?=$this->Url->buildFromPath('Homes::index'); ?>">CARDs</a>
         </li>
         <li class="nav-item linhavertical">
+            <a class="nav-link menuadm" href="<?=$this->Url->buildFromPath('Cursos::index'); ?>">Cursos</a>
+        </li>
+        <li class="nav-item linhavertical">
           <a class="nav-link menuadm" href="<?=$this->Url->buildFromPath('Cidades::index'); ?>">Cidades</a>
         </li>
         <li class="nav-item linhavertical">
