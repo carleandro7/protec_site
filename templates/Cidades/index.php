@@ -1,46 +1,39 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Cidade[]|\Cake\Collection\CollectionInterface $cidades
- */
-?>
-<div class="cidades index content">
-    <?= $this->Html->link(__('New Cidade'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Cidades') ?></h3>
+
+
+<div class="categdespesas top-adm">
+      <h2>Cidades</h2>
+      <?= $this->Html->link(__('Nova Cidade'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <div class="table-responsive">
-        <table>
-            <thead>
-                <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
+      <table class="table table-hover table-striped" cellpadding="0" cellspacing="0">
+          <thead>
+          <tr>
+                    <th><?= $this->Paginator->sort('id', "COD") ?></th>
                     <th><?= $this->Paginator->sort('texto') ?></th>
                     <th><?= $this->Paginator->sort('status') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($cidades as $cidade): ?>
-                <tr>
+                   
+                    
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+      <?php foreach ($cidades as $cidade): ?>
+                    <tr>
                     <td><?= $this->Number->format($cidade->id) ?></td>
                     <td><?= h($cidade->texto) ?></td>
                     <td><?= h($cidade->status) ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $cidade->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cidade->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $cidade->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cidade->id)]) ?>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
-    </div>
+                        <td class="actions">
+                            <?= $this->Html->link(__('Alterar'), ['action' => 'edit', $cidade->id]) ?>
+                            <?= $this->Form->postLink(__('Excluir'), ['action' => 'delete', $cidade->id], ['confirm' => __('Deseja excluir o registro # {0}?', $cidade->id)]) ?>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+      </table>
+  </div>
+
+
+
 </div>
+
+
+<?= $this->Element('pagination') ?>

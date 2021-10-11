@@ -18,6 +18,7 @@ class CidadesController extends AppController
      */
     public function index()
     {
+        $this->layoutAdm();
         $cidades = $this->paginate($this->Cidades);
 
         $this->set(compact('cidades'));
@@ -32,6 +33,7 @@ class CidadesController extends AppController
      */
     public function view($id = null)
     {
+        $this->layoutAdm();
         $cidade = $this->Cidades->get($id, [
             'contain' => [],
         ]);
@@ -46,6 +48,7 @@ class CidadesController extends AppController
      */
     public function add()
     {
+        $this->layoutAdm();
         $cidade = $this->Cidades->newEmptyEntity();
         if ($this->request->is('post')) {
             $cidade = $this->Cidades->patchEntity($cidade, $this->request->getData());
@@ -68,6 +71,7 @@ class CidadesController extends AppController
      */
     public function edit($id = null)
     {
+        $this->layoutAdm();
         $cidade = $this->Cidades->get($id, [
             'contain' => [],
         ]);

@@ -18,6 +18,7 @@ class CursosController extends AppController
      */
     public function index()
     {
+        $this->layoutAdm();
         $cursos = $this->paginate($this->Cursos);
 
         $this->set(compact('cursos'));
@@ -32,6 +33,7 @@ class CursosController extends AppController
      */
     public function view($id = null)
     {
+        $this->layoutAdm();
         $curso = $this->Cursos->get($id, [
             'contain' => [],
         ]);
@@ -46,6 +48,7 @@ class CursosController extends AppController
      */
     public function add()
     {
+        $this->layoutAdm();
         $curso = $this->Cursos->newEmptyEntity();
         if ($this->request->is('post')) {
             $curso = $this->Cursos->patchEntity($curso, $this->request->getData());
@@ -68,6 +71,7 @@ class CursosController extends AppController
      */
     public function edit($id = null)
     {
+        $this->layoutAdm();
         $curso = $this->Cursos->get($id, [
             'contain' => [],
         ]);
