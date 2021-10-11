@@ -61,7 +61,8 @@ class HomesController extends AppController
             }
             $this->Flash->error(__('The home could not be saved. Please, try again.'));
         }
-        $this->set(compact('home'));
+        $cidades = $this->Homes->Cidades->find('list', ['keyField' => 'id', 'valueField' => 'texto','limit' => 200]);
+        $this->set(compact('home','cidades'));
     }
 
     /**

@@ -1,41 +1,59 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Home $home
- */
-?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $home->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $home->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Homes'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+
+<div class="row top-adm">
+        <div class="col-lg-12">
+            <h2 class="page-header">
+                Alterar CARD
+            </h2>
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="homes form content">
-            <?= $this->Form->create($home) ?>
-            <fieldset>
-                <legend><?= __('Edit Home') ?></legend>
-                <?php
-                    echo $this->Form->control('cidade');
-                    echo $this->Form->control('curso');
-                    echo $this->Form->control('tipo');
-                    echo $this->Form->control('mensagembtn');
-                    echo $this->Form->control('valor');
-                    echo $this->Form->control('desconto');
-                    echo $this->Form->control('status');
-                    echo $this->Form->control('ordem');
-                    echo $this->Form->control('cidades_id');
-                    echo $this->Form->control('linkbtn');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
-        </div>
-    </div>
 </div>
+<div class="clientes form">
+    <?php echo $this->Form->create($home, array("role" => "form", 'type' => 'file')); ?>
+        <fieldset>
+            <div class="row">
+                <div class="col-lg-5 form-group">  
+                    <?php echo $this->Form->control('cidade_id', array('options' => $cidades,"class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-5 form-group">  
+                    <label for="nome" class="control-label">Curso</label> 
+                    <?php echo $this->Form->input('curso', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-2 form-group">  
+                    <?php echo $this->Form->control('status', array("class" => "form-control",'options' => array('Ativo' => 'Ativo', 'Desativo' => 'Desativo'))); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 form-group">  
+                    <label for="nome" class="control-label">Tipo</label> 
+                    <?php echo $this->Form->input('tipo', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-5 form-group">  
+                    <label for="nome" class="control-label">Mensagem do Button</label> 
+                    <?php echo $this->Form->input('mensagembtn', array("class" => "form-control")); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 form-group">  
+                    <label for="nome" class="control-label">Valor</label> 
+                    <?php echo $this->Form->input('valor', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-3 form-group">  
+                    <label for="nome" class="control-label">Valor com Desconto</label> 
+                    <?php echo $this->Form->input('desconto', array("class" => "form-control")); ?>
+                </div>
+                <div class="col-lg-2 form-group">  
+                    <?php echo $this->Form->control('ordem', array("class" => "form-control")); ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 form-group">  
+                    <label for="nome" class="control-label">Link do Button</label> 
+                    <?php echo $this->Form->input('linkbtn', array("class" => "form-control")); ?>
+                </div>
+            </div>
+     
+       
+        </fieldset>
+        <button type="submit" class="btn btn-primary marginrodape">Salvar</button>
+    <?php echo $this->Form->end(); ?>                            
+</div>
+
