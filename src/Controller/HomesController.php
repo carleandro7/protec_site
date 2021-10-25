@@ -30,7 +30,7 @@ class HomesController extends AppController
     }
     public function inicio(){
         $cidades = $this->Homes->Cidades->find('all',array('conditions' => array('status' => 'Ativo')))->order(['texto' => 'ASC']);;
-        $homes = $this->Homes->find('all',array('contain' => ['Cidades'], 'conditions' => array('homes.status' => 'Ativo')))->order(['ordem' => 'ASC']);
+        $homes = $this->Homes->find('all',array('contain' => ['Cidades'], 'conditions' => array('status' => 'Ativo')))->order(['ordem' => 'ASC']);
         $selectCidades = $this->Homes->newEmptyEntity();
         $select_cidade= 0;
         if ($this->request->is('post')) {
