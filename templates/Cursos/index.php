@@ -24,6 +24,7 @@
                     <td><?= h($curso->curso) ?></td>
                     <td><?= h($curso->subtituloprincipal) ?></td>
                         <td class="actions">
+                            <?= $this->Html->link(__('Link'), ['controller' => 'Homes', 'action' => 'curso', $curso->id],['target' => '_blank']) ?>
                             <?= $this->Html->link(__('Alterar'), ['action' => 'edit', $curso->id]) ?>
                             <?= $this->Form->postLink(__('Excluir'), ['action' => 'delete', $curso->id], ['confirm' => __('Deseja excluir o registro # {0}?', $curso->id)]) ?>
                         </td>

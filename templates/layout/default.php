@@ -27,7 +27,7 @@
 <div class="container-fluid menu">
 
   <nav class="navbar navbar-expand-lg  navbar-light menu">
-        <a href="https://api.whatsapp.com/send?phone=558633035002&text=Olá, gostaria de uma bolsa" class="navbar-brand whatsapp-text" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=5586988294973&text=Olá, gostaria de uma bolsa" class="navbar-brand whatsapp-text" target="_blank">
         <i class="fa fa-whatsapp whatsapp-text"></i> <b class="whatsapp-text-blue">Fale conosco</b>
         </a>
         
@@ -45,8 +45,8 @@
           <div class="form-control search"> <input type="text" class="search-input" placeholder="Buscar" name="" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Buscar'"> <a href="#" class="search-icon"  > <i class="fa fa-search"></i> </a> </div>
         </div>
       </form>
-      <a class="space-rigth" target="_blank" href="https://www.instagram.com/maltafaculdade/?hl=pt-br"><i class="fa fa-instagram" style="font-size:48px;color:#00298b"></i></a>
-      <a class="space-rigth" target="_blank" href="https://www.facebook.com/maltafaculdade"><i class="fa fa-facebook-official" style="font-size:48px;color:#00298b"></i></a>
+      <a class="space-rigth" target="_blank" href=""><i class="fa fa-instagram" style="font-size:48px;color:#00298b"></i></a>
+      <a class="space-rigth" target="_blank" href=""><i class="fa fa-facebook-official" style="font-size:48px;color:#00298b"></i></a>
     </div>
   </nav>
 </div>
@@ -59,8 +59,8 @@
   <div class="container-fluid">
     <div class="row footer-pagina">
       <div class="col-lg-3 col-md-4 col-sm-12 margin-top-bottom-footer">
-              <a class="space-rigth-footer" target="_blank" href="https://www.instagram.com/maltafaculdade/?hl=pt-br"><i class="fa fa-instagram" style="font-size:48px;color:#fff"></i></a>
-              <a class="space-rigth-footer" target="_blank" href="https://www.facebook.com/maltafaculdade"><i class="fa fa-facebook-official" style="font-size:48px;color:#fff"></i></a>
+              <a class="space-rigth-footer" target="_blank" href=""><i class="fa fa-instagram" style="font-size:48px;color:#fff"></i></a>
+              <a class="space-rigth-footer" target="_blank" href=""><i class="fa fa-facebook-official" style="font-size:48px;color:#fff"></i></a>
       </div>
       <div class="col-lg-6 col-md-4 col-sm-12 margin-top-bottom-footer">
         <?php echo $this->Html->image("PROTEC3.png", array("class" => "img-fluid logo-rodape")); ?>
@@ -75,8 +75,8 @@
           <div class="row">
             <div class="lema-footer" >
               <b>MAIS INFORMAÇÕES</b><br>
-              (86) 9 0000-0000 <br>
-              (86) 3300-0000 <br>
+              (86) 98829-4973 <br>
+              (86) 98808-4012 <br>
               atendimento@protec.com.br
             </div>
           </div>

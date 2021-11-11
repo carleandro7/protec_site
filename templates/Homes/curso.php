@@ -31,7 +31,7 @@
                     <b>MODALIDADE</b>
                 </div>
                 <div class="col-lg-12 curso-button">
-                    <?= $curso->turno ?>
+                    <?= $curso->modalidade ?>
                 </div>
                 <div class="col-lg-16 curso-button">
                     <b>DURAÇÃO DO CURSO</b>
